@@ -33,7 +33,6 @@ class StyleTransformer(nn.Module):
         batch_size = inp_tokens.size(0)
         max_enc_len = inp_tokens.size(1)
 
-        print("HEYYYmlkmlkmk",max_enc_len)
         assert max_enc_len <= self.max_length
 
         pos_idx = torch.arange(self.max_length).unsqueeze(0).expand((batch_size, -1))
